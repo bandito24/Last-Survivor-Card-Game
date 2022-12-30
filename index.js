@@ -161,20 +161,24 @@ function youLose(){
     setTimeout(() => {
     document.getElementById('level-failed').style.display = 'flex';
     document.getElementById("lives-count").innerHTML = `You have ${lives} lives left`
+}, '500')
 
     if(lives === 1){
+        setTimeout(() => {
         document.getElementById("lives-count").innerHTML = `You have 1 life left. Don't be defeated again`
+    }, '500')
     }
 
     if(lives === 0){
+        setTimeout(() => {
         document.getElementById("loss-message").innerHTML = 'You have Died!'
         document.getElementById("lives-count").innerHTML = `You have no lives left`
         document.getElementById("continue-button2").innerHTML = `New game`
         lives = 6
         stage = 1
-
+    }, '500')
     }
-}, '400')
+
 }
 
 document.getElementById('continue-button2').addEventListener('click', resetDeck)
@@ -185,7 +189,7 @@ function victory(){
     levelCleared.style.display = 'flex'
     levelCleared.querySelector('h2').innerHTML = 'Congratulations! You have won the game!'
     document.getElementById("continue-button").innerHTML = 'Continue as a God'
-}, '400')
+}, '500')
 }
 
 stateProgress()
@@ -321,7 +325,7 @@ function flipCard9(){
         setTimeout(() => {
             stateProgress()
             levelCleared.style.display = 'flex'
-        }, '400') 
+        }, '500') 
             } else if(stage === 6){
                 victory()
             } else {
@@ -329,7 +333,7 @@ function flipCard9(){
                 stateProgress()
                 setTimeout(() => {
                 levelCleared.style.display = 'flex'
-            }, '400') 
+            }, '500') 
             }
         }
     }
