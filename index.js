@@ -174,16 +174,18 @@ function youLose(){
         stage = 1
 
     }
-}, '200')
+}, '400')
 }
 
 document.getElementById('continue-button2').addEventListener('click', resetDeck)
 
 
 function victory(){
+    setTimeout(() => {
     levelCleared.style.display = 'flex'
     levelCleared.querySelector('h2').innerHTML = 'Congratulations! You have won the game!'
     document.getElementById("continue-button").innerHTML = 'Continue as a God'
+}, '400')
 }
 
 stateProgress()
@@ -316,14 +318,18 @@ function flipCard9(){
             stage++;
             lives++;
             if(stage < 6){
+        setTimeout(() => {
             stateProgress()
             levelCleared.style.display = 'flex'
+        }, '400') 
             } else if(stage === 6){
                 victory()
             } else {
                 document.getElementById('congrats').innerHTML = 'Your power is beyond mortal comprehension'
                 stateProgress()
+                setTimeout(() => {
                 levelCleared.style.display = 'flex'
+            }, '400') 
             }
         }
     }
