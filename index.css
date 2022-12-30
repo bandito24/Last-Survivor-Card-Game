@@ -1,0 +1,486 @@
+html, body {
+    margin:0;
+    height:100%;
+    overflow:hidden;
+    font-family: 'adobe-garamond-pro', serif;
+
+  }
+
+/* For the background gif and headers */
+.bg-container {
+    width:auto;
+    height:100%;
+    border:3.5px solid red;
+    box-sizing:border-box;
+    background-image: url('https://thumbs.gfycat.com/AltruisticMisguidedGroundbeetle-size_restricted.gif');
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center center;
+  }
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+header h1{
+    background-color: rgba(255, 255, 255, .3);
+    padding: .5em;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+header img{
+    width: auto;
+    height: 75px;
+    position: relative;
+    top: 1.4em;
+    left: .8em;
+}
+
+/* directions */
+
+#directions{
+    text-decoration: underline;
+    font-style: italic;
+    width: 150px;
+    min-width: 150px;
+    margin: 0 auto;
+    position: relative;
+    left: 1.2em;
+    font-size: 14px;
+    
+}
+
+#directions h2{
+    background-color: rgba(255, 255, 255, .3);
+    border-radius: 5px;
+    padding: .3em;
+    display: inline-flex;
+    justify-content: center; 
+ 
+}
+
+#directions:hover{
+    cursor: help;
+}
+
+#directions-info{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    background-color: rgba(240, 240, 240, .93);
+    border-radius: 5px;
+    padding: .5em 1em 1.5em 2em;
+    bottom: 35em;
+    display: none;
+    animation: directions .4s ease-in;
+    text-align: center;
+}
+
+
+@keyframes directions{
+    0%{
+        transform: scale(.01);
+    }
+    100%{
+        transform: scale(1.0);
+    }
+}
+
+
+#exit{
+    position: relative;
+    right: 1em;
+    bottom: 1.5em;
+    background-color: hsl(51, 80%, 52%);
+    height: 1.5em;
+    width: 3em;
+    min-height: 1.5em;
+    min-width: 3em;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px black;
+}
+
+#exit:hover{
+    background-color: hsl(51, 100%, 62%);
+    transition: background-color 100ms ease-in;
+}
+
+#exit:active{
+    background-color: hsl(51, 80%, 52%);
+    transition: background-color 1ms ease-out;
+    box-shadow: 1px 1px 1px black;
+
+}
+
+#directions-paragraph{
+    position: relative;
+    top: 1em;
+    right: 1.85em;
+}
+
+
+
+/* card containers */
+
+.card-container{
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.card-container img{
+    width: 150px;
+    height: auto;
+    margin-bottom: 2em;
+    border-radius: 5px;
+    border: 3.5px rgba(0, 0, 0, 0) solid;
+    
+}
+
+.card-container img:hover{
+    cursor: pointer;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+/* For the stages and lives bar */
+
+#progress-bar{
+    position: relative;
+    bottom: 4em;
+    display: flex;
+    justify-content: space-between; 
+    margin: 0 30px;
+}
+
+#progress-bar img{
+    width: 250px;
+    height: auto;
+
+
+}
+
+#progress-info{
+    position: relative;
+    bottom: 10em;
+    display: flex;
+    justify-content: space-between; 
+    margin: 0 30px;
+    z-index: 1;
+}
+
+#lives-info{
+    position: relative;
+    right: 5em;
+}
+
+#stages-info{
+    position: relative;
+    left: 2em;
+}
+
+
+/* Level Cleared banner */ 
+
+#level-cleared{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 2.5em;
+    z-index: 2;
+    bottom: 47em;
+    display: none;
+}
+
+#level-cleared img{
+    width: 40em;
+    height: auto;
+    position: relative;
+    left: 2em;
+}
+
+
+#congrats{
+    position: relative;
+    bottom: 15.5em;
+    left: 5.6em;
+    text-decoration: underline;
+    color: rgb(220, 220, 220);
+
+}
+
+
+#continue-button{
+    position: relative;
+    top: 16.7em;
+    z-index: 3;
+    right: 19.2em;
+    border-radius: 5px;
+    min-width: 145px;
+    text-align: center;
+    background-color: hsl(51, 100%, 62%);
+    padding: .2em;
+    box-shadow: 2px 2px 2px black;
+    
+}
+
+#continue-button:hover{
+    background-color: hsl(51, 100%, 70%);
+    transition: background-color 100ms ease-in;
+    cursor: pointer;
+}
+
+#continue-button:active{
+    background-color: hsl(40, 100%, 66%);
+    transition: background-color 1ms ease-out;
+    box-shadow: 1px 1px 1px black;
+
+}
+
+/* level failed Banner */
+
+#level-failed{
+    position: relative;
+    bottom: 43em;
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+
+#level-failed img{
+    height: 450px
+}
+
+#loss-info{
+    position: relative;
+    bottom: 17em;
+    text-align: center;
+    line-height: 1.5;
+   
+}
+
+#continue-button2{
+    border-radius: 5px;
+    background-color: hsl(51, 100%, 62%);
+    padding: .2em;
+    box-shadow: 2px 2px 2px black;
+    width: 9em;
+    position: relative;
+    left: 9em;
+    
+}
+
+#continue-button2:hover{
+    background-color: hsl(51, 100%, 70%);
+    transition: background-color 100ms ease-in;
+    cursor: pointer;
+}
+
+#continue-button2:active{
+    background-color: hsl(40, 100%, 66%);
+    transition: background-color 1ms ease-out;
+    box-shadow: 1px 1px 1px black;
+}
+
+#loss-message{
+    background-color: rgba(255, 255, 255, .3);
+    width: 10em;
+    padding: .2em;
+    border-radius: 5px;
+    position: relative;
+    left: 5.7em;
+}
+
+
+
+/* MEDIA QUERIES */
+
+
+@media only screen and (max-width: 800px){
+    .card-container img{
+        width: 120px;
+        height: auto;
+        
+    }
+
+    #level-cleared{
+        transform: scale(0.9);
+        position: relative;
+        left: 2.5em;
+        bottom: 44.8em;
+
+    }
+
+    #level-failed{
+        bottom: 41em;
+        transform: scale(.9);
+    }
+
+
+
+    #congrats{
+        bottom: 15.5em;
+        left: 5.7em;
+    }
+
+    #directions-info{
+        
+        font-size: 16px;
+        border-radius: 5px;
+        bottom: 36em;
+    }
+
+    #continue-button{
+        top: 16em;
+        right: 19.2em;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 700px){
+    .card-container img{
+        width: 110px;
+    }
+
+    #level-failed{
+        bottom: 40em;
+    }
+    #directions-info{
+        bottom: 36em;    
+    }
+
+}
+
+@media only screen and (max-width: 601px){
+    .card-container img{
+        width: 100px;
+        height: auto;
+        margin-bottom: 2px;
+        
+    }
+
+    #card-container{
+        margin-top: 0em;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        bottom: 0;
+        top: 9em;
+        height: 5em;
+        margin: auto;
+        
+        align-content: center;
+        justify-content: space-evenly;
+        
+    }
+    
+    .row{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    
+    }
+
+
+    #progress-bar{
+        position: relative;
+        top: 19em;
+        justify-content: center; 
+        margin: 0 30px;
+        right: 0em;
+    }
+    
+    #progress-bar img{
+        width: 250px;
+        height: auto;
+    }
+
+    #progress-info{
+    position: relative;
+    top: 17.1em;
+    right: 3em;
+    flex-direction: column;
+    justify-content: center; 
+    margin: 0 30px;
+    z-index: 1;
+    font-size: 12px;
+    }
+    #stages-info{
+        right: 4em;
+        display: flex;
+        justify-content: center;
+    }
+
+    #lives-info{
+        position: relative;
+        bottom: 1.7em;
+        left: 2.1em;
+        display: flex;
+        justify-content: center;
+    }
+
+    #lives{
+        display: none;
+    }
+
+    #stages{
+        margin: 0
+    }
+    #directions{
+        font-size: .75rem;
+        position: relative;
+        bottom: 2em;
+        left: 2.2em;
+    }
+
+
+    header h1{
+        padding: .5em;
+        border-radius: 5px;
+        z-index: 1;
+        font-size: 1.65rem;
+    }
+
+    header img{
+        width: auto;
+        height: 75px;
+        position: relative;
+        top: 1.2em;
+        left: .1em;
+    }
+
+    #directions-info{
+        font-size: 14px;
+        border-radius: 5px;
+        padding: .5em 1em 1.5em 2em;
+        bottom: 23em;
+        z-index: 5;
+    }
+    #level-cleared{
+        transform: scale(.75);
+        justify-content: center;
+        position: relative;
+        left: 1.9em;
+        bottom: 29em;
+    }
+
+    #level-failed{
+        position: relative;
+        bottom: 25em;
+        transform: scale(.75);
+        justify-content: center;
+    }
+
+}
