@@ -110,14 +110,17 @@ exit.addEventListener('click', exitDirections)
 
 //For changing directions based on screen size
 let firstCard;
+let colOrRow;
 
 if(screen.width <= 601){
     firstCard = 'top of'
+    colOrRow = 'row'
 } else {
     firstCard = 'left side of'
+    colOrRow = 'column'
 }
 
-document.getElementById('directions-paragraph').innerHTML = `You are a tired warrior determined to make it back to your homeland. Along your way, you will face many opponents you can defeat (represented by Aces and cards 2-10). However, if you encounter a lord and their army (represented by face cards), fate is unkind and you will be defeated. Start at the ${firstCard} the deck and choose one card per column. After each victorious round you will gain 1 life. If you can clear all five rounds before your lives run out you will be reunited with your homeland.`
+document.getElementById('directions-paragraph').innerHTML = `You are a tired warrior determined to make it back to your homeland. Along your way, you will face many opponents you can defeat (represented by Aces and cards 2-10). However, if you encounter a lord and their army (represented by face cards), fate is unkind and you will be defeated. Start at the ${firstCard} the deck and choose one card per ${colOrRow}. After each victorious round you will gain 1 life. If you can clear all five rounds before your lives run out you will be reunited with your homeland.`
 
 
 
